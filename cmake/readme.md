@@ -1,0 +1,3 @@
+# Description
+
+CMake helper function.

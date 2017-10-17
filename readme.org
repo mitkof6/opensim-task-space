@@ -1,0 +1,37 @@
+#+TITLE: Simulation of Constrained Musculoskeletal Systems in Task Space
+#+AUTHOR: Dimitar Stanev
+#+TODO: TODO IN-PROGRESS WAITING DONE
+
+* Description
+
+This project contains the source code for the work presented here [1]. The
+source code dependes on a specific verion of OpenSim and Simbody (see bellow).
+
+* Build
+
+The following repositories must be cloned, checked at stable_1 tag and build
+accordingly. In the near feature we will provide support for OpenSim v4.0.0.
+
+[[https://github.com/mitkof6/simbody/tree/stable_1][Simbody@stable_1]]
+
+[[https://github.com/mitkof6/opensim-core/tree/stable_1][OpenSim@stable_1]]
+
+This repository has been tested under Windows (MSVS) and Linux (GCC, CLANG).
+
+* Examples
+
+Please see the examples/ folder in src/ for details on how to use this
+framework. This folder contains the case studies presented in [1].
+
+* Notes
+
+If you are interested in some particular features, e.g. the task space
+framework, you can easily separate it from the rest of the project and use it in
+your own. Each folder in src/ is a submodule. The CMakeLists.txt specifies the
+dependencies between the different modules. In cmake/ you can find some
+additional cmake functions.
+
+
+[1] Dimitar Stanev and Konstantinos Moustakas, "Simulation of Constrained
+Musculoskeletal Systems in Task Space", IEEE Transaction on Biomedical
+Engineering, xx(xx), pp. x-x, 2017
