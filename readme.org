@@ -3,7 +3,7 @@
 #+TODO: TODO IN-PROGRESS WAITING DONE
 
 Please use the new version of the API that works with the newest version of 
-OpenSim [https://github.com/mitkof6/task-space][New API].
+OpenSim [[https://github.com/mitkof6/task-space][New API]].
 
 * Description
 
