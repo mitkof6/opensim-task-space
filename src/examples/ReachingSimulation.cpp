@@ -56,7 +56,7 @@ void testTaskSpace(INIReader& ini) {
     model.addAnalysis(kinematics);
 
     StationPointAnalysis* endEff = new StationPointAnalysis
-        (&model, indexBodyName, indexOffset);
+    (&model, indexBodyName, indexOffset);
     model.addAnalysis(endEff);
 
     ForceReporter* forces = new ForceReporter(&model);
@@ -86,8 +86,7 @@ void testTaskSpace(INIReader& ini) {
         controller =
             new MuscleBasedController(model, taskDynamics, &muscleOptimization);
         model.addController(controller);
-    }
-    else {
+    } else {
         forceController = new TaskBasedForce(taskDynamics);
         model.addForce(forceController);
     }
@@ -158,8 +157,7 @@ void testTaskSpace(INIReader& ini) {
     if (useMuscles) {
         controller->printResults(prefix,
                                  BASE_DIR + ini.Get("REACHING", "RESULTS_DIR", ""));
-    }
-    else {
+    } else {
         forceController->printResults(prefix,
                                       BASE_DIR + ini.Get("REACHING", "RESULTS_DIR", ""));
     }
@@ -222,15 +220,13 @@ int main() {
         testTaskSpace(ini);
         performPerformID(ini);
         performReactionAnalysis(ini);
-    }
-    catch (const std::exception& ex) {
+    } catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;
 #if PAUSE
         system("pause");
 #endif
         return 1;
-    }
-    catch (...) {
+    } catch (...) {
         std::cout << "Unrecognized exception " << std::endl;
 #if PAUSE
         system("pause");
